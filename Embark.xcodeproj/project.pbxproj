@@ -8,20 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		030716F220041D8A00226AC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030716F120041D8A00226AC2 /* AppDelegate.swift */; };
-		030716F420041D8A00226AC2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030716F320041D8A00226AC2 /* ViewController.swift */; };
 		030716F720041D8A00226AC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 030716F520041D8A00226AC2 /* Main.storyboard */; };
 		030716F920041D8A00226AC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 030716F820041D8A00226AC2 /* Assets.xcassets */; };
 		030716FC20041D8A00226AC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 030716FA20041D8A00226AC2 /* LaunchScreen.storyboard */; };
+		030717072004465C00226AC2 /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030717062004465C00226AC2 /* CardsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		030716EE20041D8A00226AC2 /* Embark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Embark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		030716F120041D8A00226AC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		030716F320041D8A00226AC2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		030716F620041D8A00226AC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		030716F820041D8A00226AC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		030716FB20041D8A00226AC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		030716FD20041D8A00226AC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		030717062004465C00226AC2 /* CardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +54,38 @@
 		030716F020041D8A00226AC2 /* Embark */ = {
 			isa = PBXGroup;
 			children = (
+				030717052004462100226AC2 /* Controller */,
+				030717042004461B00226AC2 /* Model */,
+				030717032004461300226AC2 /* View */,
 				030716F120041D8A00226AC2 /* AppDelegate.swift */,
-				030716F320041D8A00226AC2 /* ViewController.swift */,
-				030716F520041D8A00226AC2 /* Main.storyboard */,
-				030716F820041D8A00226AC2 /* Assets.xcassets */,
-				030716FA20041D8A00226AC2 /* LaunchScreen.storyboard */,
 				030716FD20041D8A00226AC2 /* Info.plist */,
 			);
 			path = Embark;
+			sourceTree = "<group>";
+		};
+		030717032004461300226AC2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				030716F520041D8A00226AC2 /* Main.storyboard */,
+				030716FA20041D8A00226AC2 /* LaunchScreen.storyboard */,
+				030716F820041D8A00226AC2 /* Assets.xcassets */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		030717042004461B00226AC2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		030717052004462100226AC2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				030717062004465C00226AC2 /* CardsViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				030716F420041D8A00226AC2 /* ViewController.swift in Sources */,
+				030717072004465C00226AC2 /* CardsViewController.swift in Sources */,
 				030716F220041D8A00226AC2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
