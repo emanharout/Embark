@@ -25,28 +25,14 @@
             </objects>
             <point key="canvasLocation" x="-511" y="258"/>
         </scene>
-        <!--View Controller-->
+        <!--Purchased Content Flow Controller-->
         <scene sceneID="hFt-d7-Ldo">
             <objects>
-                <viewController id="f3r-G2-eFG" sceneMemberID="viewController">
+                <viewController id="f3r-G2-eFG" customClass="PurchasedContentFlowController" customModule="Embark" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ock-cL-hKp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v5y-QM-X2h">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <connections>
-                                    <segue destination="yZb-84-UlU" kind="embed" id="KKx-WJ-Gfc"/>
-                                </connections>
-                            </containerView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="Mtn-jJ-Vd7" firstAttribute="trailing" secondItem="v5y-QM-X2h" secondAttribute="trailing" id="GTN-UT-8zO"/>
-                            <constraint firstItem="v5y-QM-X2h" firstAttribute="leading" secondItem="Mtn-jJ-Vd7" secondAttribute="leading" id="M7p-8M-WwB"/>
-                            <constraint firstItem="Mtn-jJ-Vd7" firstAttribute="bottom" secondItem="v5y-QM-X2h" secondAttribute="bottom" id="Nw2-r6-mV9"/>
-                            <constraint firstItem="v5y-QM-X2h" firstAttribute="top" secondItem="Mtn-jJ-Vd7" secondAttribute="top" id="ydk-WR-mI7"/>
-                        </constraints>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Mtn-jJ-Vd7"/>
                     </view>
                     <navigationItem key="navigationItem" id="par-yL-Kef"/>
@@ -58,18 +44,19 @@
         <!--Embark-->
         <scene sceneID="eNG-aH-ffb">
             <objects>
-                <tableViewController id="1UQ-XX-JNK" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="CategoriesTableViewController" id="1UQ-XX-JNK" customClass="CategoriesTableViewController" customModule="Embark" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="NGQ-na-J9l">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="wGT-aJ-Wjw">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CategoryCell" id="wGT-aJ-Wjw" customClass="CategoryCell" customModule="Embark" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wGT-aJ-Wjw" id="NYA-dx-9Ey">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" red="0.0" green="0.75686274509999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -89,13 +76,13 @@
         <!--Cards View Controller-->
         <scene sceneID="SBR-ES-5os">
             <objects>
-                <viewController id="yZb-84-UlU" customClass="CardsViewController" customModule="Embark" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CardsViewController" id="yZb-84-UlU" customClass="CardsViewController" customModule="Embark" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RJF-v2-Bac">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X12-Bw-1zv">
-                                <rect key="frame" x="0.0" y="559" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <items>
                                     <barButtonItem systemItem="action" id="6uh-eO-kEE" userLabel="Share Sheet Bar Button Item">
                                         <color key="tintColor" red="0.0" green="0.75686274509999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -107,12 +94,13 @@
                                 </items>
                             </toolbar>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.88235294119999996" green="0.21176470589999999" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="X12-Bw-1zv" secondAttribute="bottom" id="SaT-rd-czY"/>
                             <constraint firstItem="X12-Bw-1zv" firstAttribute="leading" secondItem="RJF-v2-Bac" secondAttribute="leading" id="U0V-z1-Zyc"/>
                             <constraint firstAttribute="trailing" secondItem="X12-Bw-1zv" secondAttribute="trailing" id="hw7-5V-DHS"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="mGg-DV-Saf"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7AB-A1-8uF" userLabel="First Responder" sceneMemberID="firstResponder"/>
