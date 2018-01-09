@@ -9,7 +9,7 @@
 import UIKit
 
 class PurchasedContentFlowController: UIViewController {
-	
+	// MARK: - Variables
 	var purchasedContentFlowView: PurchaseContentFlowView { return view as! PurchaseContentFlowView }
 	
 	lazy var categoriesViewController: UIViewController = {
@@ -20,6 +20,7 @@ class PurchasedContentFlowController: UIViewController {
 		return storyboard?.instantiateViewController(withIdentifier: "CardsViewController") as? CardsViewController ?? CardsViewController()
 	}()
 	
+	// MARK: - Instance Methods
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
@@ -34,20 +35,17 @@ class PurchasedContentFlowController: UIViewController {
 		rootViewController = !purchased ? cardsViewController : categoriesViewController
 		
 		switch (purchased, hasRootViewController) {
-		case (false, false):
-			setRootViewController(to: rootViewController)
-		case (true, false):
+		case (_, false):
 			setRootViewController(to: rootViewController)
 		case (true, true):
-			guard let currentRootViewController = childViewControllers.first else {
-				print("No child view controller found")
+			guard let currentRootViewController = childViewControllers.first as? CardsViewController else {
+				print("Cards View Controller not found")
 				return
 			}
 			swap(current: currentRootViewController, with: rootViewController)
 		default: break
 		}
 	}
-	
 	
 	// MARK: - Helper Methods
 	private func checkIfCardsPurchased() -> Bool {

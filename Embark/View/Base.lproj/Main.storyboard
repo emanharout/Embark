@@ -32,7 +32,6 @@
                     <view key="view" contentMode="scaleToFill" id="Ock-cL-hKp" customClass="PurchaseContentFlowView" customModule="Embark" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Mtn-jJ-Vd7"/>
                     </view>
                     <navigationItem key="navigationItem" id="par-yL-Kef"/>
@@ -94,7 +93,7 @@
                                 </items>
                             </toolbar>
                         </subviews>
-                        <color key="backgroundColor" red="0.88235294119999996" green="0.21176470589999999" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="X12-Bw-1zv" secondAttribute="bottom" id="SaT-rd-czY"/>
                             <constraint firstItem="X12-Bw-1zv" firstAttribute="leading" secondItem="RJF-v2-Bac" secondAttribute="leading" id="U0V-z1-Zyc"/>
