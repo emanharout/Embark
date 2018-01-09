@@ -10,6 +10,8 @@ import UIKit
 
 class PurchasedContentFlowController: UIViewController {
 	
+	var purchasedContentFlowView: PurchaseContentFlowView { return view as! PurchaseContentFlowView }
+	
 	lazy var categoriesViewController: UIViewController = {
 		return storyboard?.instantiateViewController(withIdentifier: "CategoriesTableViewController") as? CategoriesTableViewController ?? CategoriesTableViewController()
 	}()
@@ -22,12 +24,6 @@ class PurchasedContentFlowController: UIViewController {
 		super.viewDidLoad()
 		
 		loadNeededChildViewController()
-	}
-	
-	func checkIfCardsPurchased() -> Bool {
-		let userDefaults = UserDefaults.standard
-		let purchased = userDefaults.bool(forKey: "PurchasedCards")
-		return purchased
 	}
 	
 	func loadNeededChildViewController() {
@@ -52,36 +48,33 @@ class PurchasedContentFlowController: UIViewController {
 		}
 	}
 	
-	func swap(current viewController: UIViewController, with newViewController: UIViewController) {
+	
+	// MARK: - Helper Methods
+	private func checkIfCardsPurchased() -> Bool {
+		let userDefaults = UserDefaults.standard
+		let purchased = userDefaults.bool(forKey: "PurchasedCards")
+		return purchased
+	}
+	
+	private func swap(current viewController: UIViewController, with newViewController: UIViewController) {
 		addChildViewController(newViewController)
 		viewController.willMove(toParentViewController: nil)
 		
 		transition(from: viewController, to: newViewController, duration: 0.3, options: UIViewAnimationOptions.transitionCrossDissolve, animations: { [unowned self] in
 			// Contraints
 			newViewController.view.translatesAutoresizingMaskIntoConstraints = false
-			self.constrainToView(newViewController.view)
+			self.purchasedContentFlowView.constrainToView(newViewController.view)
 		}) { _ in
 			newViewController.didMove(toParentViewController: self)
 			viewController.removeFromParentViewController()
 		}
 	}
 	
-	func setRootViewController(to childViewController: UIViewController) {
+	private func setRootViewController(to childViewController: UIViewController) {
 		addChildViewController(childViewController)
 		childViewController.view.translatesAutoresizingMaskIntoConstraints = false
 		view.addSubview(childViewController.view)
-		constrainToView(childViewController.view)
+		purchasedContentFlowView.constrainToView(childViewController.view)
 		childViewController.didMove(toParentViewController: self)
 	}
-	
-	func constrainToView(_ subView: UIView) {
-		let constraints = [
-			subView.topAnchor.constraint(equalTo: view.topAnchor),
-			subView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-			subView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-			subView.trailingAnchor.constraint(equalTo: view.trailingAnchor)
-		]
-		NSLayoutConstraint.activate(constraints)
-	}
-	
 }

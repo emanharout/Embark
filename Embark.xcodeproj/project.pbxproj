@@ -15,6 +15,7 @@
 		0307170920048CD400226AC2 /* PurchasedContentFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0307170820048CD400226AC2 /* PurchasedContentFlowController.swift */; };
 		0307170B2004BC7500226AC2 /* CategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0307170A2004BC7500226AC2 /* CategoriesTableViewController.swift */; };
 		03F47E942004BE76006C7304 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F47E932004BE76006C7304 /* CategoryCell.swift */; };
+		03F47E962004C2F2006C7304 /* PurchaseContentFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F47E952004C2F2006C7304 /* PurchaseContentFlowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		0307170820048CD400226AC2 /* PurchasedContentFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasedContentFlowController.swift; sourceTree = "<group>"; };
 		0307170A2004BC7500226AC2 /* CategoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewController.swift; sourceTree = "<group>"; };
 		03F47E932004BE76006C7304 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		03F47E952004C2F2006C7304 /* PurchaseContentFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseContentFlowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 		030717032004461300226AC2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				03F47E952004C2F2006C7304 /* PurchaseContentFlowView.swift */,
 				03F47E932004BE76006C7304 /* CategoryCell.swift */,
 				030716F520041D8A00226AC2 /* Main.storyboard */,
 				030716FA20041D8A00226AC2 /* LaunchScreen.storyboard */,
@@ -170,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0307170920048CD400226AC2 /* PurchasedContentFlowController.swift in Sources */,
+				03F47E962004C2F2006C7304 /* PurchaseContentFlowView.swift in Sources */,
 				030717072004465C00226AC2 /* CardsViewController.swift in Sources */,
 				030716F220041D8A00226AC2 /* AppDelegate.swift in Sources */,
 				0307170B2004BC7500226AC2 /* CategoriesTableViewController.swift in Sources */,
