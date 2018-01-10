@@ -13,9 +13,18 @@
         <scene sceneID="lYw-oH-fd4">
             <objects>
                 <navigationController id="dfQ-Kq-vAw" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0r2-Wa-ob9">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="0r2-Wa-ob9">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.0" green="0.75686274509999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="f3r-G2-eFG" kind="relationship" relationship="rootViewController" id="3dS-Y9-N8q"/>
@@ -25,7 +34,7 @@
             </objects>
             <point key="canvasLocation" x="-511" y="258"/>
         </scene>
-        <!--Purchased Content Flow Controller-->
+        <!--Embark-->
         <scene sceneID="hFt-d7-Ldo">
             <objects>
                 <viewController id="f3r-G2-eFG" customClass="PurchasedContentFlowController" customModule="Embark" customModuleProvider="target" sceneMemberID="viewController">
@@ -34,18 +43,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Mtn-jJ-Vd7"/>
                     </view>
-                    <navigationItem key="navigationItem" id="par-yL-Kef"/>
+                    <navigationItem key="navigationItem" title="Embark" id="par-yL-Kef"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2fl-vR-hbt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="241" y="258"/>
         </scene>
-        <!--Embark-->
+        <!--Categories-->
         <scene sceneID="eNG-aH-ffb">
             <objects>
-                <tableViewController storyboardIdentifier="CategoriesTableViewController" id="1UQ-XX-JNK" customClass="CategoriesTableViewController" customModule="Embark" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="CategoriesTableViewController" title="Categories" id="1UQ-XX-JNK" customClass="CategoriesTableViewController" customModule="Embark" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="NGQ-na-J9l">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
@@ -66,6 +75,7 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Embark" id="avd-Lv-xBa"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hVs-O0-afu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -77,11 +87,11 @@
             <objects>
                 <viewController storyboardIdentifier="CardsViewController" id="yZb-84-UlU" customClass="CardsViewController" customModule="Embark" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RJF-v2-Bac">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X12-Bw-1zv">
-                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="559" width="375" height="44"/>
                                 <items>
                                     <barButtonItem systemItem="action" id="6uh-eO-kEE" userLabel="Share Sheet Bar Button Item">
                                         <color key="tintColor" red="0.0" green="0.75686274509999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -92,15 +102,25 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hLp-nQ-GNq" customClass="KolodaView" customModule="Koloda">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="559"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.0" green="0.75686274509999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="X12-Bw-1zv" firstAttribute="top" secondItem="hLp-nQ-GNq" secondAttribute="bottom" id="8cg-sz-t4Q"/>
+                            <constraint firstItem="hLp-nQ-GNq" firstAttribute="leading" secondItem="mGg-DV-Saf" secondAttribute="leading" id="DVj-QR-LgY"/>
                             <constraint firstAttribute="bottom" secondItem="X12-Bw-1zv" secondAttribute="bottom" id="SaT-rd-czY"/>
                             <constraint firstItem="X12-Bw-1zv" firstAttribute="leading" secondItem="RJF-v2-Bac" secondAttribute="leading" id="U0V-z1-Zyc"/>
+                            <constraint firstItem="hLp-nQ-GNq" firstAttribute="top" secondItem="mGg-DV-Saf" secondAttribute="top" id="Yar-hr-jBr"/>
                             <constraint firstAttribute="trailing" secondItem="X12-Bw-1zv" secondAttribute="trailing" id="hw7-5V-DHS"/>
+                            <constraint firstItem="mGg-DV-Saf" firstAttribute="trailing" secondItem="hLp-nQ-GNq" secondAttribute="trailing" id="rAp-ZC-Sz7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mGg-DV-Saf"/>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7AB-A1-8uF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
