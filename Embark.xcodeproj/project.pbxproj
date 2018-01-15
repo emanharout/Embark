@@ -14,6 +14,9 @@
 		030717072004465C00226AC2 /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030717062004465C00226AC2 /* CardsViewController.swift */; };
 		0307170920048CD400226AC2 /* PurchasedContentFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0307170820048CD400226AC2 /* PurchasedContentFlowController.swift */; };
 		0307170B2004BC7500226AC2 /* CategoriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0307170A2004BC7500226AC2 /* CategoriesTableViewController.swift */; };
+		03BD6431200732E800249275 /* CardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BD6430200732E800249275 /* CardsView.swift */; };
+		03BD6433200738CD00249275 /* QuestionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BD6432200738CD00249275 /* QuestionCardView.swift */; };
+		03BD64352008B62C00249275 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BD64342008B62C00249275 /* Question.swift */; };
 		03F47E942004BE76006C7304 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F47E932004BE76006C7304 /* CategoryCell.swift */; };
 		03F47E962004C2F2006C7304 /* PurchaseContentFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F47E952004C2F2006C7304 /* PurchaseContentFlowView.swift */; };
 		1BD6350D53CAF889CB83EDF1 /* Pods_Embark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AF4D817EF3EFB0BE9DF7166 /* Pods_Embark.framework */; };
@@ -29,6 +32,9 @@
 		030717062004465C00226AC2 /* CardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
 		0307170820048CD400226AC2 /* PurchasedContentFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasedContentFlowController.swift; sourceTree = "<group>"; };
 		0307170A2004BC7500226AC2 /* CategoriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewController.swift; sourceTree = "<group>"; };
+		03BD6430200732E800249275 /* CardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsView.swift; sourceTree = "<group>"; };
+		03BD6432200738CD00249275 /* QuestionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCardView.swift; sourceTree = "<group>"; };
+		03BD64342008B62C00249275 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		03F47E932004BE76006C7304 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		03F47E952004C2F2006C7304 /* PurchaseContentFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseContentFlowView.swift; sourceTree = "<group>"; };
 		1E5A8B28FC1D44DFB60090A4 /* Pods-Embark.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Embark.release.xcconfig"; path = "Pods/Target Support Files/Pods-Embark/Pods-Embark.release.xcconfig"; sourceTree = "<group>"; };
@@ -81,6 +87,8 @@
 		030717032004461300226AC2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				03BD6432200738CD00249275 /* QuestionCardView.swift */,
+				03BD6430200732E800249275 /* CardsView.swift */,
 				03F47E952004C2F2006C7304 /* PurchaseContentFlowView.swift */,
 				03F47E932004BE76006C7304 /* CategoryCell.swift */,
 				030716F520041D8A00226AC2 /* Main.storyboard */,
@@ -93,6 +101,7 @@
 		030717042004461B00226AC2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				03BD64342008B62C00249275 /* Question.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -255,11 +264,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03BD6431200732E800249275 /* CardsView.swift in Sources */,
 				0307170920048CD400226AC2 /* PurchasedContentFlowController.swift in Sources */,
 				03F47E962004C2F2006C7304 /* PurchaseContentFlowView.swift in Sources */,
+				03BD64352008B62C00249275 /* Question.swift in Sources */,
 				030717072004465C00226AC2 /* CardsViewController.swift in Sources */,
 				030716F220041D8A00226AC2 /* AppDelegate.swift in Sources */,
 				0307170B2004BC7500226AC2 /* CategoriesTableViewController.swift in Sources */,
+				03BD6433200738CD00249275 /* QuestionCardView.swift in Sources */,
 				03F47E942004BE76006C7304 /* CategoryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
