@@ -37,11 +37,21 @@ extension CardsViewController: KolodaViewDelegate, KolodaViewDataSource {
 		return view
 	}
 	
+	func kolodaSpeedThatCardShouldDrag(_ koloda: KolodaView) -> DragSpeed {
+		return DragSpeed.default
+	}
+	
+	func kolodaDidRunOutOfCards(_ koloda: KolodaView) {
+		// TODO: Implement
+	}
+	
+	func koloda(_ koloda: KolodaView, didSelectCardAt index: Int) {
+		// TODO: Implement
+	}
+	
 	func kolodaNumberOfCards(_ koloda: KolodaView) -> Int {
 		return dummyCards.count
 	}
 	
-	func kolodaSpeedThatCardShouldDrag(_ koloda: KolodaView) -> DragSpeed {
-		return DragSpeed.default
-	}
+	
 }

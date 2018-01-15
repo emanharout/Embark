@@ -13,4 +13,12 @@ class CardsView: UIView {
 	
 	@IBOutlet var kolodaView: KolodaView!
 	
+	func currentCardIndex() -> Int {
+		return kolodaView.currentCardIndex
+	}
+	
+	func remainingCards() -> Int {
+		return kolodaView.countOfCards
+	}
+	
 }
