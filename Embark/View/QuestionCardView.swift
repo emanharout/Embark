@@ -29,6 +29,12 @@ class QuestionCardView: UIView {
 		fatalError("init(coder:) has not been implemented")
 	}
 	
+	override func layoutSubviews() {
+		super.layoutSubviews()
+		
+		layer.cornerRadius = bounds.width / 10.0
+	}
+	
 	private func setupLabel(text: String? = nil) {
 		label.text = text
 		label.textColor = UIColor.white
