@@ -14,7 +14,9 @@ class QuestionCardView: UIView {
 	var model: Model? {
 		didSet {
 			label.text = model?.questionText
-			// TODO: add bonus label or append to existing
+			if let bonusText = model?.bonusText {
+				label.text?.append("\n\(bonusText)")
+			}
 			backgroundColor = model?.backgroundColor
 		}
 	}
