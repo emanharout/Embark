@@ -10,8 +10,6 @@ import UIKit
 
 class PurchasedContentFlowController: UIViewController {
 	// MARK: - Variables
-	var purchasedContentFlowView: PurchaseContentFlowView { return view as! PurchaseContentFlowView }
-	
 	lazy var categoriesViewController: UIViewController = {
 		return storyboard?.instantiateViewController(withIdentifier: "CategoriesTableViewController") as? CategoriesTableViewController ?? CategoriesTableViewController()
 	}()
@@ -61,7 +59,7 @@ class PurchasedContentFlowController: UIViewController {
 		transition(from: viewController, to: newViewController, duration: 0.3, options: UIViewAnimationOptions.transitionCrossDissolve, animations: { [unowned self] in
 			// Contraints
 			newViewController.view.translatesAutoresizingMaskIntoConstraints = false
-			self.purchasedContentFlowView.constrainToView(newViewController.view)
+			self.view.constrainToView(newViewController.view)
 		}) { _ in
 			newViewController.didMove(toParentViewController: self)
 			viewController.removeFromParentViewController()
@@ -72,7 +70,7 @@ class PurchasedContentFlowController: UIViewController {
 		addChildViewController(childViewController)
 		childViewController.view.translatesAutoresizingMaskIntoConstraints = false
 		view.addSubview(childViewController.view)
-		purchasedContentFlowView.constrainToView(childViewController.view)
+		view.constrainToView(childViewController.view)
 		childViewController.didMove(toParentViewController: self)
 	}
 }

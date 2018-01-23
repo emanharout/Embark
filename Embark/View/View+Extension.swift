@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PurchaseContentFlowView: UIView {
+extension UIView {
 	
 	func constrainToView(_ subView: UIView) {
 		let constraints = [
