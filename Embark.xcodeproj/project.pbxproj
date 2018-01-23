@@ -87,8 +87,8 @@
 		030717032004461300226AC2 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				03BD6432200738CD00249275 /* QuestionCardView.swift */,
 				03BD6430200732E800249275 /* CardsView.swift */,
+				03BD6432200738CD00249275 /* QuestionCardView.swift */,
 				03F47E952004C2F2006C7304 /* PurchaseContentFlowView.swift */,
 				03F47E932004BE76006C7304 /* CategoryCell.swift */,
 				030716F520041D8A00226AC2 /* Main.storyboard */,
