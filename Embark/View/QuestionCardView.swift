@@ -18,7 +18,7 @@ class QuestionCardView: UIView {
 			backgroundColor = model?.backgroundColor
 		}
 	}
-
+	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
 		
@@ -50,8 +50,10 @@ class QuestionCardView: UIView {
 		let constraints = [
 			label.centerXAnchor.constraint(equalTo: centerXAnchor),
 			label.centerYAnchor.constraint(equalTo: centerYAnchor),
-			label.leadingAnchor.constraint(equalTo: leadingAnchor),
-			label.trailingAnchor.constraint(equalTo: trailingAnchor)
+			label.topAnchor.constraint(greaterThanOrEqualTo: topAnchor, constant: 10.0),
+			label.bottomAnchor.constraint(lessThanOrEqualTo: bottomAnchor, constant: -10.0),
+			label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10.0),
+			label.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10.0)
 		]
 		NSLayoutConstraint.activate(constraints)
 	}

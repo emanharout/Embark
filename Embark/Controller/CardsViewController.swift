@@ -14,10 +14,10 @@ class CardsViewController: UIViewController {
 	var cardsView: CardsView { return view as! CardsView }
 	
 	let dummyCards = [
-		Question(text: "First Question", bonus: nil),
-		Question(text: "Second Question", bonus: nil),
-		Question(text: "Third Question", bonus: nil),
-		Question(text: "Fourth Question", bonus: nil),
+		Question(text: "First Question\nFirst Question\nFirst Question\nFirst Question\nFirst Question\nFirst Question\nFirst Question\nFirst Question\nFirst Question\nFirst Question\nFirst Question\n", bonus: nil),
+		Question(text: "Second Question \n Second Question", bonus: nil),
+		Question(text: "Third Question \n Third Question \n Third Question", bonus: nil),
+		Question(text: "If you could go to any place on earth, where would it be and why would you decide to go there, explain in great detail, ok? Thank you! \n \n Bonus: What if you had to also think about this other factor, how would it change your decision and why would it change that way? \n So how is it going, Mark? Tell me all about it please!!!", bonus: nil),
 		Question(text: "Fifth Question", bonus: nil)
 	]
 	

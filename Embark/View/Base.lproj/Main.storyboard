@@ -103,18 +103,22 @@
                                 </items>
                             </toolbar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hLp-nQ-GNq" customClass="KolodaView" customModule="Koloda">
-                                <rect key="frame" x="45" y="60" width="285" height="439"/>
+                                <rect key="frame" x="45" y="161.5" width="285" height="280"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" red="0.0" green="0.75686274509999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="750" constant="280" id="iYo-a3-KTM"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="X12-Bw-1zv" firstAttribute="top" secondItem="hLp-nQ-GNq" secondAttribute="bottom" constant="60" id="8cg-sz-t4Q"/>
+                            <constraint firstItem="X12-Bw-1zv" firstAttribute="top" relation="greaterThanOrEqual" secondItem="hLp-nQ-GNq" secondAttribute="bottom" constant="60" id="8cg-sz-t4Q"/>
+                            <constraint firstItem="hLp-nQ-GNq" firstAttribute="centerY" secondItem="RJF-v2-Bac" secondAttribute="centerY" id="AL8-hD-V7R"/>
                             <constraint firstItem="hLp-nQ-GNq" firstAttribute="leading" secondItem="mGg-DV-Saf" secondAttribute="leading" constant="45" id="DVj-QR-LgY"/>
                             <constraint firstAttribute="bottom" secondItem="X12-Bw-1zv" secondAttribute="bottom" id="SaT-rd-czY"/>
                             <constraint firstItem="X12-Bw-1zv" firstAttribute="leading" secondItem="RJF-v2-Bac" secondAttribute="leading" id="U0V-z1-Zyc"/>
-                            <constraint firstItem="hLp-nQ-GNq" firstAttribute="top" secondItem="mGg-DV-Saf" secondAttribute="top" constant="60" id="Yar-hr-jBr"/>
+                            <constraint firstItem="hLp-nQ-GNq" firstAttribute="top" relation="greaterThanOrEqual" secondItem="mGg-DV-Saf" secondAttribute="top" constant="60" id="Yar-hr-jBr"/>
                             <constraint firstAttribute="trailing" secondItem="X12-Bw-1zv" secondAttribute="trailing" id="hw7-5V-DHS"/>
                             <constraint firstItem="mGg-DV-Saf" firstAttribute="trailing" secondItem="hLp-nQ-GNq" secondAttribute="trailing" constant="45" id="rAp-ZC-Sz7"/>
                         </constraints>
