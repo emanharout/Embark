@@ -9,6 +9,7 @@
 import UIKit
 import Koloda
 
+// TODO: Add in-app purchase feature: view card history
 class CardsViewController: UIViewController {
 	
 	var cardsView: CardsView { return view as! CardsView }

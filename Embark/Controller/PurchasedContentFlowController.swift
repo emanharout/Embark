@@ -8,6 +8,7 @@
 
 import UIKit
 
+// TODO: In storyboard, use NavController toolbar instead of custom one
 class PurchasedContentFlowController: UIViewController {
 	// MARK: - Variables
 	lazy var categoriesViewController: UIViewController = {
