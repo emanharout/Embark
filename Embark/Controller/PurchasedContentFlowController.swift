@@ -27,6 +27,7 @@ class PurchasedContentFlowController: UIViewController {
 		super.viewDidLoad()
 		
 		loadNeededChildViewController()
+		setNeedsStatusBarAppearanceUpdate()
 	}
 	
 	func loadNeededChildViewController() {
