@@ -28,21 +28,19 @@ class PurchasedContentFlowController: UIViewController {
 	
 	func loadNeededChildViewController() {
 		let purchased = checkIfCardsPurchased()
-		let rootViewController: UIViewController
+		let rootViewControllerToSet: UIViewController
 		let hasRootViewController = childViewControllers.count > 0
 		
-		rootViewController = !purchased ? cardsViewController : categoriesViewController
+		rootViewControllerToSet = !purchased ? cardsViewController : categoriesViewController
 		
-		switch (purchased, hasRootViewController) {
-		case (_, false):
-			setRootViewController(to: rootViewController)
-		case (true, true):
+		if hasRootViewController {
 			guard let currentRootViewController = childViewControllers.first as? CardsViewController else {
 				print("Cards View Controller not found")
 				return
 			}
-			swap(current: currentRootViewController, with: rootViewController)
-		default: break
+			swap(current: currentRootViewController, with: rootViewControllerToSet)
+		} else {
+			setRootViewController(to: rootViewControllerToSet)
 		}
 	}
 	
