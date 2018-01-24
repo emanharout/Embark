@@ -9,12 +9,12 @@
 import UIKit
 
 class CategoriesTableViewController: UITableViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-			
-    }
-
+	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		
+	}
+	
 }
 
 extension CategoriesTableViewController {
@@ -22,7 +22,7 @@ extension CategoriesTableViewController {
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		return tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath)
 	}
-
+	
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		return 5
 	}

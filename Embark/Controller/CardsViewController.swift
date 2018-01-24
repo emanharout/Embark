@@ -9,10 +9,15 @@
 import UIKit
 import Koloda
 
+protocol CardsViewControllerDelegate: class {
+	func setToolBarButtonItem(sender: CardsViewController, item: UIBarButtonItem)
+}
+
 // TODO: Add in-app purchase feature: view card history
 class CardsViewController: UIViewController {
 	
 	var cardsView: CardsView { return view as! CardsView }
+	weak var delegate: CardsViewControllerDelegate?
 	
 	let dummyCards = [
 		Question(text: "First Question\nFirst Question\nFirst Question\nFirst Question\nFirst Question\nFirst Question\nFirst Question\nFirst Question\nFirst Question\nFirst Question\nFirst Question\n", bonus: nil),
@@ -27,8 +32,18 @@ class CardsViewController: UIViewController {
 		
 		cardsView.kolodaView.delegate = self
 		cardsView.kolodaView.dataSource = self
+		setupToolbarItem()
 	}
 	
+	@objc func shareSheetTapped() {
+		print("I'm alive!")
+	}
+	
+	private func setupToolbarItem() {
+		let shareItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareSheetTapped))
+		shareItem.tintColor = UIColor.init(red: 0.0/255.0, green: 193.0/255.0, blue: 1.0, alpha: 1.0)
+		delegate?.setToolBarButtonItem(sender: self, item: shareItem)
+	}
 }
 
 extension CardsViewController: KolodaViewDelegate, KolodaViewDataSource {

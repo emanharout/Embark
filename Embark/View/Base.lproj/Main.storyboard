@@ -48,9 +48,6 @@
                         <viewLayoutGuide key="safeArea" id="Mtn-jJ-Vd7"/>
                     </view>
                     <toolbarItems>
-                        <barButtonItem systemItem="action" id="1St-TC-Mzu">
-                            <color key="tintColor" red="0.0" green="0.75686274509999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="WEW-me-Ifv"/>
                         <barButtonItem image="Settings Icon" id="fWp-5o-LL2">
                             <color key="tintColor" red="0.0" green="0.75686274509999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

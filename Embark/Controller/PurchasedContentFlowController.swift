@@ -12,11 +12,14 @@ import UIKit
 class PurchasedContentFlowController: UIViewController {
 	// MARK: - Variables
 	lazy var categoriesViewController: UIViewController = {
-		return storyboard?.instantiateViewController(withIdentifier: "CategoriesTableViewController") as? CategoriesTableViewController ?? CategoriesTableViewController()
+		let viewController = storyboard?.instantiateViewController(withIdentifier: "CategoriesTableViewController") as? CategoriesTableViewController ?? CategoriesTableViewController()
+		return viewController
 	}()
 	
 	lazy var cardsViewController: CardsViewController = {
-		return storyboard?.instantiateViewController(withIdentifier: "CardsViewController") as? CardsViewController ?? CardsViewController()
+		let viewController = storyboard?.instantiateViewController(withIdentifier: "CardsViewController") as? CardsViewController ?? CardsViewController()
+		viewController.delegate = self
+		return viewController
 	}()
 	
 	// MARK: - Instance Methods
@@ -71,5 +74,12 @@ class PurchasedContentFlowController: UIViewController {
 		view.addSubview(childViewController.view)
 		view.constrainToView(childViewController.view)
 		childViewController.didMove(toParentViewController: self)
+	}
+}
+
+extension PurchasedContentFlowController: CardsViewControllerDelegate {
+	// TODO: Make sure to remove item when denit
+	func setToolBarButtonItem(sender: CardsViewController, item: UIBarButtonItem) {
+		toolbarItems?.insert(item, at: 0)
 	}
 }
