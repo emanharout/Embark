@@ -8,9 +8,19 @@
 
 import UIKit
 
+// TODO: - Add Gradient
 class QuestionCardView: UIView {
 	
+	struct Model {
+		let questionText: String
+		let bonusText: String?
+		let backgroundColor: UIColor
+	}
+	
+	// MARK: - Properties
 	private let label = UILabel()
+	private let gradientLayer = CAGradientLayer()
+	
 	var model: Model? {
 		didSet {
 			label.text = model?.questionText
@@ -25,6 +35,7 @@ class QuestionCardView: UIView {
 		super.init(frame: frame)
 		
 		setupLabel()
+		setupGradientLayer()
 	}
 	
 	required init?(coder aDecoder: NSCoder) {
@@ -35,8 +46,12 @@ class QuestionCardView: UIView {
 		super.layoutSubviews()
 		
 		layer.cornerRadius = bounds.width / 10.0
+		layer.masksToBounds = true
+		gradientLayer.frame = bounds
+		
 	}
 	
+	// MARK: - Private Methods
 	private func setupLabel(text: String? = nil) {
 		label.text = text
 		label.textColor = UIColor.white
@@ -60,10 +75,14 @@ class QuestionCardView: UIView {
 		NSLayoutConstraint.activate(constraints)
 	}
 	
-	struct Model {
-		let questionText: String
-		let bonusText: String?
-		let backgroundColor: UIColor
+	private func setupGradientLayer() {
+		let startColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0).cgColor
+		let endColor  = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.15).cgColor
+		
+		gradientLayer.startPoint = CGPoint(x: 0.5, y: 0.0)
+		gradientLayer.endPoint = CGPoint(x: 0.5, y: 1.0)
+		gradientLayer.colors = [startColor, endColor]
+		layer.insertSublayer(gradientLayer, below: label.layer)
 	}
 	
 }
